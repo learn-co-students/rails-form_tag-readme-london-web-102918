@@ -112,3 +112,79 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"wM0kUAuTuVVs64yO9C+2FgVExLWEkXYBL4fHjMvdHb/wXQBnEIZ1bXK7fKn5neP40gN03qULwt9kcGv5dkFKWg==", "commit"=>"Submit Post", "controller"=>"posts", "description"=>"asdf", "title"=>"Rails Introduction Quiz", "utf8"=>"✓"}}
   Rendered posts/new.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-11-23 23:48:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (43.9ms)
+Completed 200 OK in 116ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-11-23 23:48:31 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 608ms (Views: 606.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2018-11-23 23:48:32 +0000
+
+
+Started GET "/posts/new" for ::1 at 2018-11-23 23:48:35 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 66ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-11-23 23:48:42 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Dog", "description"=>"Woof"}, "authenticity_token"=>"jI7rcF1QZUWBfHnDjRppzAd2uM+HO5WBlnYbVVEgoJhAFGEH4PDRZgK6fzW0ApXTzmv/a6ENluldg++ArQFoCw=="}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Dog"], ["description", "Woof"], ["created_at", "2018-11-23 23:48:42.461667"], ["updated_at", "2018-11-23 23:48:42.461667"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 16ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/posts" for ::1 at 2018-11-23 23:48:42 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2018-11-23 23:53:43 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-11-23 23:53:52 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 96ms (Views: 95.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-11-23 23:53:55 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-11-23 23:54:01 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zqiXhnVy3vRKHoGJPmmziO9qg0f1sLgS6/w3JpA7zN4CMh3xyNJq18nYh38HcU+XJnfE49OGu3ogCcPzbBoETQ==", "post"=>{"title"=>"Dog", "description"=>"Woof"}, "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Dog"], ["description", "Woof"], ["created_at", "2018-11-23 23:54:01.545134"], ["updated_at", "2018-11-23 23:54:01.545134"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/posts" for ::1 at 2018-11-23 23:54:01 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.2ms)
